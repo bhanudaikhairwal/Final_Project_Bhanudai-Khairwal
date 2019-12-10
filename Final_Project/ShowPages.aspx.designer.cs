@@ -24,6 +24,15 @@ namespace Final_Project
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl pages_info;
 
         /// <summary>
+        /// page_t control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl page_t;
+
+        /// <summary>
         /// page_title control.
         /// </summary>
         /// <remarks>
@@ -40,5 +49,14 @@ namespace Final_Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl page_body;
+
+        /// <summary>
+        /// updatebutton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl updatebutton;
     }
 }

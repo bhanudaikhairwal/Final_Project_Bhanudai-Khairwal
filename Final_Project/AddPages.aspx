@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddPages.aspx.cs" Inherits="Final_Project.AddPages" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layout.Master" AutoEventWireup="true" CodeBehind="AddPages.aspx.cs" Inherits="Final_Project.AddPages" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-     <div id="page_form_container" class="one_view" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="body" runat="server">
+     <div id="page_form_container" runat="server">
         <h2 class="one_title">Add New Page</h2>
         
         <section>

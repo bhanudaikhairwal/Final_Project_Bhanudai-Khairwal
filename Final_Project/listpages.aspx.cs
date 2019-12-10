@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using MySql.Data.MySqlClient;
+using System.Diagnostics;
 
 namespace Final_Project
 {
@@ -16,16 +18,16 @@ namespace Final_Project
             string searchkey = "";
             if (Page.IsPostBack)
             {
-                searchkey = pages_search_textbox.Text.ToString();
+                searchkey = pages_search_textbox.Text;
             }
 
 
-            string query = "select * from mypages";
+            string query = "select * from pages";
 
             if (searchkey != "")
             {
-                query += " WHERE mypagetitle like '%" + searchkey + "%' ";
-                query += " or mypagebody like '%" + searchkey + "%' ";
+                query += " WHERE pagetitle like '%" + searchkey + "%' ";
+                query += " or pagebody like '%" + searchkey + "%' ";
             }
             sql_debugger.InnerHtml = query;
 
@@ -36,15 +38,15 @@ namespace Final_Project
             {
                 pages_result.InnerHtml += "<div class=\"listitem\">";
 
-                string pageid = row["mypageid"];
+                string pageid = row["pageid"];
 
-                string pagetitle = row["mypagetitle"];
-                pages_result.InnerHtml += "<div class=\"col4\"><a href=\"ShowPages.aspx?mypageid=" + pageid + "\">" + pagetitle + "</a></div>";
+                string pagetitle = row["pagetitle"];
+                pages_result.InnerHtml += "<div class=\"col4\">" + pagetitle + "</div>";
 
-                string pagebody = row["mypagebody"];
+                string pagebody = row["pagebody"];
                 pages_result.InnerHtml += "<div class=\"col4\">" + pagebody + "</div>";
 
-                pages_result.InnerHtml += "<div class=\"col4last\"><a href=\"ShowPages.aspx?studentid=" + pageid + "\">View Details</a></div>";
+                pages_result.InnerHtml += "<div class=\"col4last\"><a href=\"ShowPage.aspx?pageid=" + pageid + "\">View Details</a></div>";
 
                 pages_result.InnerHtml += "</div>";
             }

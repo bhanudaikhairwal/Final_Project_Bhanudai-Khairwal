@@ -75,5 +75,59 @@ namespace Final_Project
 
             return ResultSet;
         }
+        public Dictionary<String, String> FindPage(int id)
+        {
+           
+            MySqlConnection Connect = new MySqlConnection(ConnectionString);
+            
+            Dictionary<String, String> page = new Dictionary<String, String>();
+
+            try
+            {
+                string query = "select * from pages where pageid = " + id;
+                Debug.WriteLine("Connection Initialized...");
+                
+                Connect.Open();
+               
+                MySqlCommand cmd = new MySqlCommand(query, Connect);
+                
+                MySqlDataReader resultset = cmd.ExecuteReader();
+
+                
+                List<Dictionary<String, String>> Pages = new List<Dictionary<String, String>>();
+
+                
+                while (resultset.Read())
+                {
+                   
+                    Dictionary<String, String> Page = new Dictionary<String, String>();
+
+                    
+                    for (int i = 0; i < resultset.FieldCount; i++)
+                    {
+                        Debug.WriteLine("Attempting to transfer data of " + resultset.GetName(i));
+                        Debug.WriteLine("Attempting to transfer data of " + resultset.GetString(i));
+                        Page.Add(resultset.GetName(i), resultset.GetString(i));
+
+                    }
+                    
+                    Pages.Add(Page);
+                }
+
+                page = Pages[0]; 
+
+            }
+            catch (Exception ex)
+            {
+                
+                Debug.WriteLine("Something went wrong in the find Student method!");
+                Debug.WriteLine(ex.ToString());
+            }
+
+            Connect.Close();
+            Debug.WriteLine("Database Connection Terminated.");
+
+            return page;
+        }
     }
 }

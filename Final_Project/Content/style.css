@@ -1,0 +1,159 @@
+﻿header, footer {
+    color: #fff;
+    text-align: center;
+    padding: 2em 0 0;
+}
+
+footer {
+    padding: 1em 0;
+}
+
+.nav_button {
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+    padding: 1em;
+    text-decoration: none;
+}
+
+#students_button {
+    background-color: #FF5733;
+}
+
+#classes_button {
+    background-color: #F1C40F;
+}
+
+#teachers_button {
+    background-color: #A569BD;
+}
+
+/* MAIN CONTENT */
+#main_content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.list_header {
+    text-align: center;
+    padding: 1em 3em;
+}
+
+#students_header {
+    background-color: #FF5733;
+}
+
+#classes_header {
+    background-color: #F1C40F;
+}
+
+#teachers_header {
+    background-color: #A569BD;
+}
+
+.list_search {
+    float: right;
+}
+
+.add_button {
+    float: left;
+}
+
+.list_button {
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    padding: 0.5em;
+    text-decoration: none;
+    background-color: #F2F3F4;
+    color: #000;
+}
+
+.debugger {
+    clear: both;
+}
+
+/* TABLE*/
+.listitem {
+    background: #fefefe;
+    padding: 12px 5%;
+    width: 90%;
+    overflow: hidden;
+}
+
+.list_head {
+    border-bottom: 2px solid black;
+    background-color: #e9d898;
+}
+
+.listitem:after {
+    clear: both;
+}
+
+.listitem:nth-child(2n) {
+    background: #dedede;
+}
+
+.listitem:hover {
+    background: #e9d898;
+}
+
+.col4 {
+    float: left;
+    width: 25%;
+    margin-right: 5%;
+}
+
+.col4last {
+    float: left;
+    width: 10%;
+    margin-right: 0;
+}
+
+
+/* ONE VIEW */
+.one_view {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1em;
+    border: 2px dashed black;
+    background-color: #F2F3F4;
+}
+
+.one_title {
+    padding: 0.5em;
+}
+
+#s_title {
+    background-color: #FF5733;
+}
+
+#c_title {
+    background-color: #F1C40F;
+}
+
+.one_options {
+    margin: 1em;
+    border: none;
+    color: white;
+    padding: 1em 2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.one_update {
+    background-color: #008CBA;
+}
+
+.one_delete {
+    background-color: #f44336;
+}
+
+.one_add {
+    background-color: #3CE740;
+}

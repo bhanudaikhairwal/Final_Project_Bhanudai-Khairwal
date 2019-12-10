@@ -1,0 +1,28 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="Final_Project.Layout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>My Pages</title>
+    <link rel="stylesheet" type="text/css" href="/Content/style.css" />
+</head>
+<body>
+    <header>
+        <h1>MY PAGES</h1>
+        <div id="main_nav">
+            <a id="pages_button" class="nav_button" href="ListStudents.aspx">Pages</a>
+        </div>
+    </header>
+    <div id="main_content">
+        <form id="form1" runat="server">
+            <asp:ContentPlaceHolder ID="body" runat="server"></asp:ContentPlaceHolder>
+        </form>
+    </div>
+    <footer>
+        <h3>HTTP5101 Web Application Development Final_Project</h3>
+        <p>N01359582: Bhanudai Khairwal</p>
+    </footer>
+</body>
+</html>
+
